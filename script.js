@@ -35,6 +35,7 @@ function getBase(){
   }
 
   if(passCharacterBase !== ""){ 
+    console.log ("passCharacterBase: " + passCharacterBase);
      return passCharacterBase
      }
 
@@ -44,6 +45,7 @@ function getBase(){
     }
   
   return passCharacterBase
+
 }
 
 function passArray(){
@@ -71,10 +73,10 @@ function generatePassword() {
 
   var password = "";
   for (var i = 0; i < passLength; i++) {
-    password += passCharacterBase.charAt(Math.floor(Math.random() * passLength));
+    var loopStorage = Math.floor(Math.random() * passCharacterBase.length);
+    console.log("Password Character Length Ramonized String: " + loopStorage);
+    password += passCharacterBase[loopStorage];
   }
-  //return Math.floor(Math.random())
-  //large passCharacterBase
 
   // Print Password
   return password
