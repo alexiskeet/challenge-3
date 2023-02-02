@@ -74,7 +74,7 @@ function generatePassword() {
   var password = "";
   for (var i = 0; i < passLength; i++) {
     var loopStorage = Math.floor(Math.random() * passCharacterBase.length);
-    console.log("Password Character Length Ramonized String: " + loopStorage);
+    console.log("Password Character Length Randomized String: " + loopStorage);
     password += passCharacterBase[loopStorage];
   }
 
